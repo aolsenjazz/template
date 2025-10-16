@@ -50,34 +50,38 @@ export function AddAuthForm({ userId, onAuthAdded }: AddAuthFormProps) {
   }, [error]);
 
   return (
-    <form className='add-auth-form' onSubmit={handleSubmit}>
-      <label htmlFor='newPhone'>Add New Auth</label>
+    <>
+      {userId && (
+        <form className='add-auth-form' onSubmit={handleSubmit}>
+          <label htmlFor='newPhone'>Add New Auth</label>
 
-      <div className='add-auth-row'>
-        <input
-          id='newPhone'
-          type='text'
-          placeholder='Enter phone number...'
-          value={phone}
-          onChange={(e) => setPhone(e.target.value)}
-          className='add-auth-input'
-          disabled={isLoading}
-        />
-        <button
-          type='submit'
-          className='add-auth-button'
-          disabled={isLoading || phone.trim() === ''}
-        >
-          {isLoading ? 'Adding…' : 'Add'}
-        </button>
-      </div>
+          <div className='add-auth-row'>
+            <input
+              id='newPhone'
+              type='text'
+              placeholder='Enter phone number...'
+              value={phone}
+              onChange={(e) => setPhone(e.target.value)}
+              className='add-auth-input'
+              disabled={isLoading}
+            />
+            <button
+              type='submit'
+              className='add-auth-button'
+              disabled={isLoading || phone.trim() === ''}
+            >
+              {isLoading ? 'Adding…' : 'Add'}
+            </button>
+          </div>
 
-      {/* Inline feedback */}
-      {localError && <p className='error-text'>{localError}</p>}
+          {/* Inline feedback */}
+          {localError && <p className='error-text'>{localError}</p>}
 
-      {isSuccess && data && (
-        <p className='success-text'>✅ Auth created successfully!</p>
+          {isSuccess && data && (
+            <p className='success-text'>✅ Auth created successfully!</p>
+          )}
+        </form>
       )}
-    </form>
+    </>
   );
 }
