@@ -2,6 +2,7 @@
   "name": "Vault CMS",
   "private": true,
   "scripts": {
+    "start": "concurrently -n backend,web -c green,blue \"npm run start --workspace backend\" \"npm run start --workspace web\"",
     "tsc": "npm run tsc --workspaces",
     "lint": "npm run lint --workspaces",
     "lint:fix": "npm run lint:fix --workspaces",
@@ -14,5 +15,8 @@
   ],
   "dependencies": {
     "@vault/core": "^1.0.0"
+  },
+  "devDependencies": {
+    "concurrently": "^9.2.1"
   }
 }
