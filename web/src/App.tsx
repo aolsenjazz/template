@@ -1,7 +1,12 @@
 import { useAppDispatch, useAppSelector } from '@/app/hooks';
 import { increaseBy, increment } from '@/features/counter/counter-slice';
 
+import type { UserRow } from '@vault/core/types';
+
 import './App.css';
+
+const a: UserRow = {} as unknown as UserRow;
+console.log(a);
 
 function App() {
   const dispatch = useAppDispatch();

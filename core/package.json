@@ -1,0 +1,45 @@
+{
+  "name": "@vault/core",
+  "version": "1.0.0",
+  "description": "Ikigailabs core services, util function, state management",
+  "author": "IkigaiLabs Inc.",
+  "sideEffects": false,
+  "exports": {
+    ".": "./src/index.ts",
+    "./logger": "./src/logger/index.ts",
+    "./features": "./src/features/index.ts",
+    "./types": "./src/types/index.ts",
+    "./api": "./src/api/index.ts",
+    "./middleware": "./src/middleware/index.ts",
+    "./service": "./src/service/index.ts"
+  },
+  "scripts": {
+    "tsc": "tsc",
+    "lint": "eslint ./src -c config/eslint.config.mjs",
+    "lint:fix": "eslint ./src --fix -c config/eslint.config.mjs"
+  },
+  "devDependencies": {
+    "@eslint/js": "^9.17.0",
+    "@ianvs/prettier-plugin-sort-imports": "^4.4.1",
+    "@types/react": "^18.3.1",
+    "@typescript-eslint/eslint-plugin": "^8.23.0",
+    "@typescript-eslint/parser": "^8.23.0",
+    "eslint": "^9.17.0",
+    "eslint-config-prettier": "^10.0.1",
+    "eslint-plugin-prettier": "^5.2.1",
+    "nodemon": "^3.1.9",
+    "prettier": "^3.1.1",
+    "ts-node": "^10.9.2",
+    "tsx": "^4.20.3",
+    "typescript": "5.4",
+    "typescript-eslint": "^8.18.2"
+  },
+  "peerDependencies": {
+    "@reduxjs/toolkit": "^2.8.2"
+  },
+  "prettier": "./config/prettier.config.mjs",
+  "dependencies": {
+    "async-mutex": "^0.5.0",
+    "axios": "^1.11.0"
+  }
+}

@@ -1,5 +1,5 @@
 {
-  "name": "Vault CMS Frontend",
+  "name": "@vault/web",
   "private": true,
   "version": "1.0.0",
   "scripts": {
@@ -13,6 +13,7 @@
   "author": "Alexander Olsen",
   "dependencies": {
     "@reduxjs/toolkit": "^2.9.0",
+    "@vault/core": "^1.0.0",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
     "react-redux": "^9.2.0",

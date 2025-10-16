@@ -11,5 +11,8 @@
     "web",
     "core",
     "backend"
-  ]
+  ],
+  "dependencies": {
+    "@vault/core": "^1.0.0"
+  }
 }
