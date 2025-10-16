@@ -1,0 +1,15 @@
+{
+  "name": "ikigai-frontend",
+  "private": true,
+  "scripts": {
+    "tsc": "npm run tsc --workspaces",
+    "lint": "npm run lint --workspaces",
+    "lint:fix": "npm run lint:fix --workspaces",
+    "build": "npm run build --workspace=web"
+  },
+  "workspaces": [
+    "web",
+    "core",
+    "backend"
+  ]
+}
