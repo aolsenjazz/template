@@ -1,0 +1,44 @@
+{
+  "name": "react-template",
+  "private": true,
+  "version": "1.0.0",
+  "scripts": {
+    "start": "vite -c vite.config.ts",
+    "build": "rimraf dist && vite build -c vite.config.ts",
+    "test": "jest --config jest.config.ts",
+    "lint": "eslint \"./src/**/*.{ts,tsx,js,jsx}\" -c eslint.config.mjs",
+    "lint:fix": "eslint \"./src/**/*.{ts,tsx,js,jsx}\" -c eslint.config.mjs --fix",
+    "tsc": "tsc"
+  },
+  "author": "Alexander Olsen",
+  "dependencies": {
+    "@reduxjs/toolkit": "^2.9.0",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "react-redux": "^9.2.0",
+    "redux": "^5.0.1"
+  },
+  "devDependencies": {
+    "@eslint/js": "^9.37.0",
+    "@ianvs/prettier-plugin-sort-imports": "^4.7.0",
+    "@svgr/rollup": "^8.1.0",
+    "@types/jest": "^30.0.0",
+    "@types/react": "^19.2.2",
+    "@types/react-dom": "^19.2.2",
+    "@typescript-eslint/eslint-plugin": "^8.46.1",
+    "@typescript-eslint/parser": "^8.46.1",
+    "@vitejs/plugin-react": "^4.7.0",
+    "eslint": "^9.37.0",
+    "eslint-config-prettier": "^10.1.8",
+    "eslint-plugin-prettier": "^5.5.4",
+    "jest": "^30.2.0",
+    "prettier": "^3.6.2",
+    "rimraf": "^6.0.1",
+    "serve": "^14.2.5",
+    "ts-jest": "^29.4.5",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.9.3",
+    "typescript-eslint": "^8.46.1",
+    "vite": "^6.4.0"
+  }
+}
