@@ -1,4 +1,4 @@
-import { AuthRow, UserRow } from '@vault/core/types';
+import { ArtistRow, AuthRow, UserRow } from '@vault/core/types';
 
 export const users: UserRow[] = [
   { id: 1, username: 'alex', displayName: 'Alex Olsen' },
@@ -21,3 +21,8 @@ export function getAuthsByUserId(userId: number): AuthRow[] {
     (a) => a.primaryUser === userId || a.lastSelectedUser === userId
   );
 }
+
+export const artists: ArtistRow[] = [
+  { id: 1, userId: 1, handle: 'alexmusic', name: 'Alex Olsen' },
+  { id: 2, userId: 3, handle: 'taylorgray', name: 'Taylor Gray' },
+];

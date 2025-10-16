@@ -2,7 +2,6 @@ import cors from 'cors';
 import dotenv from 'dotenv';
 import express from 'express';
 
-import { authsRouter } from './routes/auths.js';
 import { usersRouter } from './routes/users.js';
 
 dotenv.config();
@@ -18,7 +17,6 @@ app.get('/', (_req, res) => {
 
 // Routes
 app.use('/users', usersRouter);
-app.use('/auths', authsRouter);
 
 // Server start
 const PORT = 3001;
