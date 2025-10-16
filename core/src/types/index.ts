@@ -2,28 +2,34 @@
  * one single index.ts for brevity
  */
 export type ArtistRow = {
-  id: string;
-  userId: string;
+  id: number;
+  userId: number;
   handle: string;
   name: string;
 }
 
 export type UserRow = {
-  id: string;
+  id: number;
+  username: string;
+  displayName: string;
+}
+
+export type UserDTO = {
+  id: number;
   username: string;
   displayName: string;
   isArtist: boolean;
 }
 
 export type AuthRow = {
-  id: string;
+  id: number;
   phone: string;
-  lastSelectedUser: string;
-  primaryUser: string;
+  lastSelectedUser: number;
+  primaryUser: number;
 }
 
 export type AuthDTO = {
-  id: string;
+  id: number;
   phone: string;
   lastSelectedUser: UserRow;
   primaryUser: UserRow
