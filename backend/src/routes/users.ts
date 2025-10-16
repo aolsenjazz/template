@@ -7,9 +7,8 @@ import {
   getUserById,
   users,
 } from '../data/mock-data.js';
-import { ApiResponse } from '../types/index.js';
 
-import type { UserDTO, UserRow } from '@vault/core/types';
+import type { ApiResponse, UserDTO, UserRow } from '@vault/core/types';
 
 function nextAuthId(): number {
   return auths.length ? Math.max(...auths.map((a) => a.id)) + 1 : 1;
@@ -70,12 +69,9 @@ usersRouter.get('/', (req, res) => {
   return res.status(200).json(response);
 });
 
-/**
- * I'm using a GET here, which is semantically horrible, but easily for me to test quickly
- */
-usersRouter.get('/:userId/auths', (req, res) => {
+usersRouter.post('/:userId/auths', (req, res) => {
   const userId = parseInt(req.params.userId, 10);
-  const { phone } = req.query;
+  const { phone } = req.body;
 
   if (typeof phone !== 'string' || phone.trim() === '') {
     const response: ApiResponse = {

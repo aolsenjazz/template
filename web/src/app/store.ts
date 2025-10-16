@@ -1,15 +1,17 @@
-import counterReducer from '@/features/counter/counter-slice';
+import { vaultApi } from '@/features/api/vault-api';
 import { Action, configureStore, ThunkAction } from '@reduxjs/toolkit';
 
 import { listenerMiddleware } from './listener-middleware';
 
 export const store = configureStore({
   reducer: {
-    counter: counterReducer,
+    [vaultApi.reducerPath]: vaultApi.reducer,
   },
   preloadedState: {},
   middleware: (getDefaultMiddleware) =>
-    getDefaultMiddleware().concat(listenerMiddleware.middleware),
+    getDefaultMiddleware()
+      .concat(listenerMiddleware.middleware)
+      .concat(vaultApi.middleware),
 });
 
 export type AppStore = typeof store;

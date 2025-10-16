@@ -34,3 +34,9 @@ export type AuthDTO = {
   lastSelectedUser: UserRow;
   primaryUser: UserRow
 }
+
+export type ApiResponse<T extends any = any> = {
+  status: number;
+  message: string;
+  data: T;
+};

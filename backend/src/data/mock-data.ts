@@ -7,9 +7,9 @@ export const users: UserRow[] = [
 ];
 
 export const auths: AuthRow[] = [
-  { id: 10, phone: '555-1111', lastSelectedUser: 1, primaryUser: 1 },
-  { id: 11, phone: '555-2222', lastSelectedUser: 2, primaryUser: 1 },
-  { id: 12, phone: '555-3333', lastSelectedUser: 1, primaryUser: 3 },
+  { id: 10, phone: '111-555-1111', lastSelectedUser: 1, primaryUser: 1 },
+  { id: 11, phone: '111-555-2222', lastSelectedUser: 2, primaryUser: 1 },
+  { id: 12, phone: '111-555-3333', lastSelectedUser: 1, primaryUser: 3 },
 ];
 
 export function getUserById(id: number): UserRow | undefined {
