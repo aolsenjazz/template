@@ -5,6 +5,7 @@
     "tsc": "pnpm -r tsc",
     "lint": "pnpm -r lint",
     "lint:fix": "pnpm -r lint:fix",
+    "dev": "pnpm --parallel -r dev",
     "build": "pnpm --filter @app/web build"
   }
 }

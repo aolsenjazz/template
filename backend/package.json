@@ -4,17 +4,18 @@
   "description": "Express backend",
   "type": "module",
   "scripts": {
+    "dev": "tsx watch src/index.ts",
     "start": "tsx src/index.ts",
     "tsc": "tsc",
     "lint": "eslint ./src -c eslint.config.mjs",
     "lint:fix": "eslint ./src --fix -c eslint.config.mjs"
   },
   "dependencies": {
+    "@app/core": "workspace:*",
     "cors": "^2.8.5",
     "express": "^4.19.2"
   },
   "devDependencies": {
-    "@app/core": "workspace:*",
     "@eslint/js": "catalog:",
     "@ianvs/prettier-plugin-sort-imports": "catalog:",
     "@types/cors": "^2.8.17",
@@ -22,16 +23,13 @@
     "@types/node": "^20.12.12",
     "@typescript-eslint/eslint-plugin": "catalog:",
     "@typescript-eslint/parser": "catalog:",
-    "@vitejs/plugin-react": "catalog:",
     "eslint": "catalog:",
     "eslint-config-prettier": "catalog:",
     "eslint-plugin-prettier": "catalog:",
-    "nodemon": "^3.1.9",
     "prettier": "catalog:",
-    "ts-node": "catalog:",
+    "tsx": "^4.21.0",
     "typescript": "catalog:",
-    "typescript-eslint": "catalog:",
-    "vite": "catalog:"
+    "typescript-eslint": "catalog:"
   },
   "engines": {
     "node": "22"

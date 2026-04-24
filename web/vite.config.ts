@@ -17,7 +17,7 @@ const baseConfig = defineConfig({
     rollupOptions: {
       output: {
         chunkFileNames: 'static/js/[name].[hash].js',
-        entryFileNames: 'main.js',
+        entryFileNames: 'static/js/[name].[hash].js',
         assetFileNames: ({ name }) => {
           const ext = name?.split('.').pop();
           if (/(png|jpe?g|gif|webp|avif)$/.test(ext || '')) {

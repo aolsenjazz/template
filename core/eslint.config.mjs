@@ -8,5 +8,6 @@ export default tseslint.config(
   tseslint.configs.strict,
   tseslint.configs.stylistic,
   eslintPluginPrettierRecommended,
+  { languageOptions: { parserOptions: { project: true } } },
   { rules: { '@typescript-eslint/consistent-type-definitions': 'off' } }
 );
