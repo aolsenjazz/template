@@ -14,11 +14,13 @@
   "dependencies": {
     "@app/core": "workspace:*",
     "@reduxjs/toolkit": "^2.9.0",
+    "@tailwindcss/vite": "^4.2.4",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
     "react-redux": "^9.2.0",
     "react-router-dom": "^7.14.2",
-    "redux": "^5.0.1"
+    "redux": "^5.0.1",
+    "tailwindcss": "^4.2.4"
   },
   "devDependencies": {
     "@eslint/js": "catalog:",
