@@ -3,8 +3,8 @@
   "private": true,
   "version": "1.0.0",
   "scripts": {
-    "dev": "vite -c vite.config.ts",
-    "build": "rimraf dist && vite build -c vite.config.ts",
+    "dev": "vite -c vite.config.mts",
+    "build": "rimraf dist && vite build -c vite.config.mts",
     "test": "jest --config jest.config.ts",
     "lint": "eslint \"./src/**/*.{ts,tsx,js,jsx}\" -c eslint.config.mjs",
     "lint:fix": "eslint \"./src/**/*.{ts,tsx,js,jsx}\" -c eslint.config.mjs --fix",
