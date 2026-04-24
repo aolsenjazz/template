@@ -9,7 +9,6 @@
     "sourceMap": true,
     "moduleResolution": "bundler",
     "allowSyntheticDefaultImports": true,
-    "composite": true,
     "noEmit": true,
 
     // // make the compiler more strict
