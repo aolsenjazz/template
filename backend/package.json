@@ -4,6 +4,7 @@
   "description": "Express backend",
   "type": "module",
   "scripts": {
+    "prestart": "kill $(lsof -ti:3001) 2>/dev/null || true",
     "start": "tsx src/index.ts",
     "tsc": "tsc",
     "lint": "eslint ./src -c eslint.config.mjs",
