@@ -2,13 +2,9 @@
   "name": "monorepo-starter",
   "private": true,
   "scripts": {
-    "start": "concurrently -n backend,web -c green,blue \"pnpm --filter @app/backend start\" \"pnpm --filter @app/web start\"",
     "tsc": "pnpm -r tsc",
     "lint": "pnpm -r lint",
     "lint:fix": "pnpm -r lint:fix",
     "build": "pnpm --filter @app/web build"
-  },
-  "devDependencies": {
-    "concurrently": "^9.2.1"
   }
 }
