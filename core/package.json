@@ -19,7 +19,7 @@
     "eslint": "catalog:",
     "eslint-config-prettier": "catalog:",
     "eslint-plugin-prettier": "catalog:",
-    "nodemon": "catalog:",
+    "nodemon": "^3.1.9",
     "prettier": "catalog:",
     "ts-node": "catalog:",
     "tsx": "^4.20.3",
@@ -27,7 +27,7 @@
     "typescript-eslint": "catalog:"
   },
   "peerDependencies": {
-    "@reduxjs/toolkit": "catalog:"
+    "@reduxjs/toolkit": "^2.9.0"
   },
   "dependencies": {}
 }
