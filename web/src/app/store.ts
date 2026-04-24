@@ -1,17 +1,18 @@
-import { vaultApi } from '@/features/api/vault-api';
 import { Action, configureStore, ThunkAction } from '@reduxjs/toolkit';
+
+import { api } from '@/features/api/api';
 
 import { listenerMiddleware } from './listener-middleware';
 
 export const store = configureStore({
   reducer: {
-    [vaultApi.reducerPath]: vaultApi.reducer,
+    [api.reducerPath]: api.reducer,
   },
   preloadedState: {},
   middleware: (getDefaultMiddleware) =>
     getDefaultMiddleware()
       .concat(listenerMiddleware.middleware)
-      .concat(vaultApi.middleware),
+      .concat(api.middleware),
 });
 
 export type AppStore = typeof store;
