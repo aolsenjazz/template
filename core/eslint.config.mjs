@@ -7,5 +7,6 @@ export default tseslint.config(
   eslint.configs.recommended,
   tseslint.configs.strict,
   tseslint.configs.stylistic,
-  eslintPluginPrettierRecommended
+  eslintPluginPrettierRecommended,
+  { rules: { '@typescript-eslint/consistent-type-definitions': 'off' } }
 );

@@ -1,6 +1,5 @@
-import { Action, configureStore, ThunkAction } from '@reduxjs/toolkit';
-
 import { api } from '@/features/api/api';
+import { Action, configureStore, ThunkAction } from '@reduxjs/toolkit';
 
 import { listenerMiddleware } from './listener-middleware';
 
