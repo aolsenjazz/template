@@ -1,13 +1,13 @@
 import cors from 'cors';
 import express from 'express';
 
+import { healthRouter } from './routes/health.js';
+
 const app = express();
 app.use(cors());
 app.use(express.json());
 
-app.get('/', (_req, res) => {
-  res.send('OK');
-});
+app.use('/health', healthRouter);
 
 const PORT = 3001;
 app.listen(PORT, () => {
