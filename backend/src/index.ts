@@ -1,7 +1,7 @@
 import cors from 'cors';
 import express from 'express';
 
-import { healthRouter } from './routes/health.js';
+import { healthRouter } from './routes/health';
 
 const app = express();
 app.use(cors());
